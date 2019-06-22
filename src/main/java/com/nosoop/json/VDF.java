@@ -41,8 +41,6 @@ import org.json.JSONTokener;
  * Support is basic and disgusting. It also makes certain assumptions of the
  * file (e.g., it assumes every odd-numbered string is a key, while the string
  * to its right is its corresponding value.
- *
- * @author nosoop < nosoop at users.noreply.github.com >
  */
 public class VDF {
 
@@ -188,7 +186,7 @@ public class VDF {
                             sb.append(u);
                             break;
                         default:
-                            String fmtError = 
+                            String fmtError =
                                     "Unexpected escape sequence \"\\%s\"";
                             throw x.syntaxError(String.format(fmtError, u));
                     }
@@ -318,11 +316,11 @@ public class VDF {
 
             try {
                 int i = Integer.parseInt(name);
-                
+
                 if (i >= indices) {
                     return false;
                 }
-                
+
                 index[i] = i;
             } catch (NumberFormatException e) {
                 return false;
